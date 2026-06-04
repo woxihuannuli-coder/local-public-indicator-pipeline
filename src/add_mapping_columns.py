@@ -6,9 +6,8 @@ BASE_DIR = Path(__file__).resolve().parents[1]
 input_path = BASE_DIR / "data" / "raw" / "hwaseong_small_libraries_mapping.csv"
 
 output_dir = BASE_DIR / "data" / "processed"
-output_path = output_dir / "hwaseong_small_libraries_mapped.csv"
-failed_output_path = output_dir / "mapping_failed_rows.csv"
-
+output_path = output_dir / "hwaseong_small_libraries_gu_mapped.csv"
+failed_output_path = output_dir / "gu_mapping_failed_rows.csv"
 output_dir.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(input_path, encoding="utf-8-sig")
