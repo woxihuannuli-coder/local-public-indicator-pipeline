@@ -24,7 +24,7 @@ def test_invalid_region_gu_value(small_libraries_df):
         actual_values = set(broken_df["region_gu"].dropna().unique())
         assert actual_values <= ALLOWED_REGION_GU
 
-ef test_mapping_status_not_null(small_libraries_df):
+def test_mapping_status_not_null(small_libraries_df):
     assert small_libraries_df["매핑상태"].notna().all()
 
 
